@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using BodylogExtender.presets;
+using MelonLoader;
 using MelonLoader.Utils;
 
 namespace BodylogExtender.globals;
@@ -12,13 +13,7 @@ public abstract class PresetManager
 
     private static PresetState GetDefaultPresetState()
     {
-        const int size = 4;
-        var presets = new List<AvatarPreset>();
-        for (var i = 0; i < size; i++)
-        {
-            presets.Add(new AvatarPreset());
-        }
-        return new PresetState(0, size, presets);
+        return new PresetState();
     }
 
     public static void SetActivePreset(AvatarPreset preset)
@@ -28,12 +23,7 @@ public abstract class PresetManager
 
     public static AvatarPreset GetActivePreset()
     {
-        return _presetState.Presets[_presetState.Index];
-    }
-
-    public static int GetIndex()
-    {
-        return _presetState.Index;
+        return _presetState.Presets.TryGetValue(_presetState.Index, out var preset) ? preset : new AvatarPreset();
     }
 
     public static void ToNextPreset()
@@ -46,8 +36,16 @@ public abstract class PresetManager
     private static PresetState? LoadPresetState()
     {
         if (!File.Exists(FilePath)) return null;
-        var json = File.ReadAllText(FilePath);
-        return JsonSerializer.Deserialize<PresetState>(json);
+        try
+        {
+            var json = File.ReadAllText(FilePath);
+            return JsonSerializer.Deserialize<PresetState>(json);
+        }
+        catch (Exception exception)
+        {
+            MelonLogger.Error("Failed to load presets from file!", exception);
+            return null;
+        }
     }
 
     private static void SavePresetState(PresetState presetState)

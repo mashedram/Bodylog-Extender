@@ -3,13 +3,12 @@ using UnityEngine;
 
 namespace BodylogExtender;
 
-public class ModBoneMenu
+public abstract class ModBoneMenu
 {
-    private Page _root;
-    
-    public ModBoneMenu(Action<int> callback)
+    public static void CreateBoneMenu()
     {
-        _root = Page.Root.CreatePage("BodyLog Extender", Color.magenta);
-        _root.CreateInt("Preset Count", Color.magenta, 4, 1, 0, 10, callback);
+        var root = Page.Root.CreatePage("BodyLog Extender", Color.magenta);
+        root.CreateInt("Preset Count", Color.magenta, Preferences.GetPresetCount(), 1, 0, 10, Preferences.SetPresetCount);
+        root.CreateFunction("Force Save", Color.green, Preferences.Save);
     }
 }

@@ -44,7 +44,7 @@ public abstract class BodyLogManager
         if (!InputManager.IsSwitchPresetButtonDown()) return;
         
         // Store the current bodylog into the preset
-        var preset = _activeBodyLog.GetPreset();
+        var preset = BodyLog.GetPreset();
         PresetManager.SetActivePreset(preset);
         // Then, load the next one
         PresetManager.ToNextPreset();

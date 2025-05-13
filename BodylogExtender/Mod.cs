@@ -13,14 +13,17 @@ public class Mod : MelonMod
         var harmony = new HarmonyLib.Harmony("BodylogExtender");
         harmony.PatchAll();
         
+        Preferences.Load();
         PresetManager.LoadPresetManager();
         Hooking.OnLevelLoaded += OnLevelLoaded;
         Hooking.OnLevelUnloaded += OnLevelUnloaded;
+        ModBoneMenu.CreateBoneMenu();
     }
 
     public override void OnDeinitializeMelon()
     {
         PresetManager.SavePresetManager();
+        Preferences.Save();
     }
 
     private static void OnLevelUnloaded() {

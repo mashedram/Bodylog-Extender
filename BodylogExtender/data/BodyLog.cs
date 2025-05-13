@@ -14,6 +14,19 @@ public class BodyLog
     {
         _pullCordDevice = pullCordDevice;
     }
+    
+    public static AvatarPreset GetPreset()
+    {
+        var favorites = DataManager.ActiveSave._PlayerSettings_k__BackingField._FavoriteAvatars_k__BackingField;
+        
+        var preset = new AvatarPreset();
+        for (var i = 0; i < favorites._size; i++)
+        {
+            preset.SetAvatar(i, favorites._items[i]);
+        }
+        
+        return preset;
+    }
 
     private static Il2CppSystem.Collections.Generic.List<string> GetAvatarsNativeList(AvatarPreset preset)
     {
@@ -40,18 +53,5 @@ public class BodyLog
         _pullCordDevice.LoadFavoriteAvatars();
         _pullCordDevice.UpdateAllPreviewMeshes();
         _pullCordDevice.SetPreviewMesh(_pullCordDevice.avatarIndex);  
-    }
-
-    public AvatarPreset GetPreset()
-    {
-        var favorites = DataManager.ActiveSave._PlayerSettings_k__BackingField._FavoriteAvatars_k__BackingField;
-        
-        var preset = new AvatarPreset();
-        for (var i = 0; i < favorites._size; i++)
-        {
-            preset.SetAvatar(i, favorites._items[i]);
-        }
-        
-        return preset;
     }
 }
