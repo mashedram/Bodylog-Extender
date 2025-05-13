@@ -25,7 +25,7 @@ public abstract class BodyLogManager
             MelonLogger.Msg("pullCordDevice Grabbed: " + pullCordDevice.name);
         #endif
         _activeBodyLog = new BodyLog(pullCordDevice);
-        _activeBodyLog.SetPreset(PresetManager.GetActivePreset());
+        PresetManager.SetActivePreset(BodyLog.GetPreset());
     }
 
     public static void OnBodyLogReleased(PullCordDevice pullCordDevice)
@@ -42,11 +42,11 @@ public abstract class BodyLogManager
         if (_activeBodyLog == null) return;
         if (!InputManager.IsSwitchPresetButtonDown()) return;
         
-        // Store the current bodylog into the preset
-        var preset = BodyLog.GetPreset();
-        PresetManager.SetActivePreset(preset);
-        // Then, load the next one
+        PresetManager.SetActivePreset(BodyLog.GetPreset());
         PresetManager.ToNextPreset();
         _activeBodyLog.SetPreset(PresetManager.GetActivePreset());
+        #if DEBUG
+            MelonLogger.Msg("preset changed to: " + PresetManager.GetIndex());
+        #endif
     }
 }

@@ -30,14 +30,11 @@ public class BodyLog
 
     private static Il2CppSystem.Collections.Generic.List<string> GetAvatarsNativeList(AvatarPreset preset)
     {
-        var nativeList = new Il2CppSystem.Collections.Generic.List<string>(6)
-        {
-            _size = 6,
-        };
+        var nativeList = new Il2CppSystem.Collections.Generic.List<string>();
 
         for (var i = 0; i < BodylogAvatarCount; i++)
         {
-            nativeList._items[i] = preset.Avatars[i];
+            nativeList.Add(preset.Avatars[i]);
         }
         
         return nativeList;

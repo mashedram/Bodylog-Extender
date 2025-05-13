@@ -11,6 +11,13 @@ public abstract class PresetManager
     
     private static PresetState _presetState = GetDefaultPresetState();
 
+    #if DEBUG
+    public static int GetIndex()
+    {
+        return _presetState.Index;
+    }
+    #endif
+    
     private static PresetState GetDefaultPresetState()
     {
         return new PresetState();
@@ -28,7 +35,7 @@ public abstract class PresetManager
 
     public static void ToNextPreset()
     {
-        _presetState.Index = (_presetState.Index + 1) % _presetState.Presets.Count;
+        _presetState.Index = (_presetState.Index + 1) % Preferences.GetPresetCount();
     }
     
     // Saving / Loading
