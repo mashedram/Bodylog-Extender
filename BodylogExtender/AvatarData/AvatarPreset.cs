@@ -1,7 +1,8 @@
 ﻿using System.Text.Json.Serialization;
+using BodylogExtender.Util;
 using MelonLoader;
 
-namespace BodylogExtender.presets;
+namespace BodylogExtender.AvatarData;
 
 public class AvatarPreset
 {

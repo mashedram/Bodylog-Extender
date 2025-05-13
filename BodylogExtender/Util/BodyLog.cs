@@ -1,8 +1,9 @@
-﻿using Il2CppSLZ.Bonelab;
+﻿using BodylogExtender.AvatarData;
+using Il2CppSLZ.Bonelab;
 using Il2CppSLZ.Bonelab.SaveData;
 using Il2CppSLZ.Marrow.SaveData;
 
-namespace BodylogExtender.presets;
+namespace BodylogExtender.Util;
 
 public class BodyLog
 {

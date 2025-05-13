@@ -1,4 +1,4 @@
-﻿using BodylogExtender.globals;
+﻿using BodylogExtender.Managers;
 using BoneLib;
 using MelonLoader;
 

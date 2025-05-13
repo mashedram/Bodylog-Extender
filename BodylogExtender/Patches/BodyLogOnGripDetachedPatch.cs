@@ -1,8 +1,8 @@
-﻿using BodylogExtender.globals;
+﻿using BodylogExtender.Managers;
 using HarmonyLib;
 using Il2CppSLZ.Bonelab;
 
-namespace BodylogExtender.patches;
+namespace BodylogExtender.Patches;
 
 [HarmonyPatch(typeof(PullCordDevice), nameof(PullCordDevice.OnBallGripDetached))]
 public class BodyLogOnGripDetachedPatch

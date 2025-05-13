@@ -2,7 +2,7 @@
 using Il2CppSLZ.Bonelab;
 using Il2CppSLZ.Marrow;
 
-namespace BodylogExtender.globals;
+namespace BodylogExtender.Managers;
 
 public abstract class InputManager
 {

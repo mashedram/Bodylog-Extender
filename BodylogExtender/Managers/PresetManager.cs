@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
-using BodylogExtender.presets;
+using BodylogExtender.AvatarData;
 using MelonLoader;
 using MelonLoader.Utils;
 
-namespace BodylogExtender.globals;
+namespace BodylogExtender.Managers;
 
 public abstract class PresetManager
 {

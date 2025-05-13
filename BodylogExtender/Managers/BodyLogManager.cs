@@ -1,11 +1,12 @@
-﻿using BodylogExtender.presets;
+﻿using BodylogExtender.Managers;
+using BodylogExtender.Util;
 using Il2CppSLZ.Bonelab;
 using Il2CppSLZ.Marrow;
 using LabFusion;
 using LabFusion.Utilities;
 using MelonLoader;
 
-namespace BodylogExtender.globals;
+namespace BodylogExtender.Managers;
 
 public abstract class BodyLogManager
 {

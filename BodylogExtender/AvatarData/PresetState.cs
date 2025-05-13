@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace BodylogExtender.presets;
+namespace BodylogExtender.AvatarData;
 
 public class PresetState
 {
