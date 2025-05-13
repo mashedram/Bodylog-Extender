@@ -1,9 +1,5 @@
 ﻿using System.Text.Json.Serialization;
-using Il2CppSLZ.Bonelab;
-using Il2CppSLZ.Bonelab.SaveData;
-using Il2CppSLZ.Marrow.SaveData;
 using MelonLoader;
-using UnityEngine.InputSystem;
 
 namespace BodylogExtender.presets;
 

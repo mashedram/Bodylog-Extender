@@ -1,7 +1,6 @@
 ﻿using BodylogExtender.globals;
 using HarmonyLib;
 using Il2CppSLZ.Bonelab;
-using MelonLoader;
 
 namespace BodylogExtender.patches;
 

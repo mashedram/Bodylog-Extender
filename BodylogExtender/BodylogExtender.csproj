@@ -8,367 +8,43 @@
 
     <ItemGroup>
       <Reference Include="0Harmony">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\net6\0Harmony.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\net6\0Harmony.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="BoneLib">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\Mods\BoneLib.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\Mods\BoneLib.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.Common">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.Generator">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\net6\Il2CppInterop.Generator.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\net6\Il2CppInterop.Generator.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.HarmonySupport">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\net6\Il2CppInterop.HarmonySupport.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\net6\Il2CppInterop.HarmonySupport.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.Runtime">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppmscorlib">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSLZ.Algorithms">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Algorithms.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSLZ.Algorithms.Unity">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Algorithms.Unity.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSLZ.Marrow">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Marrow.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSLZ.Marrow.VoidLogic.Core">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Marrow.VoidLogic.Core.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSLZ.Marrow.VoidLogic.Engine">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Marrow.VoidLogic.Engine.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSLZ.ModIO">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.ModIO.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSLZ.Serialize">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Serialize.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\Il2CppAssemblies\Il2CppSLZ.Marrow.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppUniTask">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Il2CppUniTask.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\Il2CppAssemblies\Il2CppUniTask.dll</HintPath>
       </Reference>
       <Reference Include="LabFusion">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\Mods\LabFusion.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\Mods\LabFusion.dll</HintPath>
       </Reference>
       <Reference Include="MelonLoader">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\net6\MelonLoader.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Addressables">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Addressables.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Animation.Rigging">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Animation.Rigging.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Barracuda">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Barracuda.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Barracuda.BurstBLAS">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Barracuda.BurstBLAS.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Burst">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Collections">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Collections.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.InputSystem">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Mathematics">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ML-Agents">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.ML-Agents.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ML-Agents.CommunicatorObjects">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.ML-Agents.CommunicatorObjects.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ProBuilder">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.ProBuilder.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ProBuilder.KdTree">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.ProBuilder.KdTree.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ProBuilder.Poly2Tri">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.ProBuilder.Poly2Tri.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Profiling.Core">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Profiling.Core.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.RenderPipelines.Universal.StressLevelZero.VRS">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Universal.StressLevelZero.VRS.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ResourceManager">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.ResourceManager.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Splines">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Splines.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Splines.Examples">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Splines.Examples.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.TextMeshPro">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.Timeline">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.ARFoundation">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.ARFoundation.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.ARSubsystems">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.ARSubsystems.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.CoreUtils">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.CoreUtils.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.Interaction.Toolkit">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.Management">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.Management.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.MockHMD">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.MockHMD.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.Oculus">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.Oculus.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXR">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.OpenXR.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXR.Features.MockRuntime">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.OpenXR.Features.MockRuntime.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\Unity.XR.OpenXR.Features.RuntimeDebugger.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.AccessibilityModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.AIModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.AndroidJNIModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.AnimationModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.ARModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.AssetBundleModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.AudioModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.ClothModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\net6\MelonLoader.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.CoreModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.CrashReportingModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.DirectorModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.DSPGraphModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.GameCenterModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.GIModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.GridModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.HotReloadModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.ImageConversionModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.IMGUIModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.InputLegacyModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.InputModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.JSONSerializeModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.LocalizationModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.ParticleSystemModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.PerformanceReportingModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.Physics2DModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.PhysicsModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.ProfilerModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.ScreenCaptureModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.SharedInternalsModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.SpriteMaskModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.SpriteShapeModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.StreamingModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.SubstanceModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.SubsystemsModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TerrainModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TerrainPhysicsModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TextCoreFontEngineModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TextCoreTextEngineModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TextRenderingModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TilemapModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TLSModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UI">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UIElementsModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UIElementsNativeModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsNativeModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UIModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UmbraModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UNETModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UNETModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityAnalyticsModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityConnectModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityCurlModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityTestProtocolModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityWebRequestModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.VehiclesModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.VFXModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.VideoModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.VRModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.WindModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.XRModule">
-        <HintPath>..\..\..\AppData\Roaming\com.kesomannen.gale\bonelab\profiles\Dev\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+        <HintPath>$(BONELAB_DIR)\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
     </ItemGroup>
 

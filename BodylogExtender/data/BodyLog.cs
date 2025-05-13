@@ -1,7 +1,6 @@
 ﻿using Il2CppSLZ.Bonelab;
 using Il2CppSLZ.Bonelab.SaveData;
 using Il2CppSLZ.Marrow.SaveData;
-using MelonLoader;
 
 namespace BodylogExtender.presets;
 
