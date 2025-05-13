@@ -8,45 +8,41 @@ namespace BodylogExtender.Managers;
 public abstract class PresetManager
 {
     private static readonly string FilePath = MelonEnvironment.UserDataDirectory + "/FavoriteAvatars.json";
-    
-    private static PresetState _presetState = GetDefaultPresetState();
+
+    private static int _index;
+    private static Dictionary<int, AvatarPreset> _presets = new();
 
     #if DEBUG
     public static int GetIndex()
     {
-        return _presetState.Index;
+        return _index;
     }
     #endif
-    
-    private static PresetState GetDefaultPresetState()
-    {
-        return new PresetState();
-    }
 
     public static void SetActivePreset(AvatarPreset preset)
     {
-        _presetState.Presets[_presetState.Index] = preset;
+        _presets[_index] = preset;
     }
 
     public static AvatarPreset GetActivePreset()
     {
-        return _presetState.Presets.TryGetValue(_presetState.Index, out var preset) ? preset : new AvatarPreset();
+        return _presets.TryGetValue(_index, out var preset) ? preset : new AvatarPreset();
     }
 
     public static void ToNextPreset()
     {
-        _presetState.Index = (_presetState.Index + 1) % Preferences.GetPresetCount();
+        _index = (_index + 1) % Preferences.GetPresetCount();
     }
     
     // Saving / Loading
     
-    private static PresetState? LoadPresetState()
+    private static PresetSaveData? LoadPresetState()
     {
         if (!File.Exists(FilePath)) return null;
         try
         {
             var json = File.ReadAllText(FilePath);
-            return JsonSerializer.Deserialize<PresetState>(json);
+            return JsonSerializer.Deserialize<PresetSaveData>(json);
         }
         catch (Exception exception)
         {
@@ -55,9 +51,9 @@ public abstract class PresetManager
         }
     }
 
-    private static void SavePresetState(PresetState presetState)
+    private static void SavePresetState(PresetSaveData presetSaveData)
     {
-        var content = JsonSerializer.Serialize(presetState);
+        var content = JsonSerializer.Serialize(presetSaveData);
         File.WriteAllText(FilePath, content);
     }
 
@@ -65,11 +61,12 @@ public abstract class PresetManager
     {
         var presetState = LoadPresetState();
         if (presetState == null) return;
-        _presetState = presetState;
+        _index = presetState.Index;
+        _presets = presetState.GetPresets();
     }
     
     public static void SavePresetManager()
     {
-        SavePresetState(_presetState);
+        SavePresetState(new PresetSaveData(_index, _presets));
     }
 }
