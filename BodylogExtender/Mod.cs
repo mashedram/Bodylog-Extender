@@ -9,10 +9,14 @@ namespace BodylogExtender;
 
 public class Mod : MelonMod
 {
+    public static bool IsFusionLoaded = false;
+    
     public override void OnInitializeMelon()
     {
         var harmony = new HarmonyLib.Harmony("BodylogExtender");
         harmony.PatchAll();
+
+        IsFusionLoaded = FindMelon("LabFusion", "Lakatrazz") != null;
         
         PresetManager.LoadPresetManager();
         ModBoneMenu.CreateBoneMenu();

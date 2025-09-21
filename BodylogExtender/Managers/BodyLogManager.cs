@@ -16,6 +16,7 @@ public abstract class BodyLogManager
 
     private static bool IsLocalPlayer(RigManager rig)
     {
+        if (!Mod.IsFusionLoaded) return true;
         return !IsFusionLoaded || rig.IsLocalPlayer();
     }
     
