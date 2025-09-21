@@ -1,5 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using BodylogExtender.Util;
+using Il2CppSLZ.Bonelab;
+using Il2CppSLZ.Marrow.Warehouse;
 using MelonLoader;
 
 namespace BodylogExtender.AvatarData;
@@ -7,15 +9,15 @@ namespace BodylogExtender.AvatarData;
 public class AvatarPreset
 {
     private const string FallbackAvatarBarcode = "fa534c5a83ee4ec6bd641fec424c4142.Avatar.Strong";
+    private const int RandomAvatarListSize = 16;
+    private static readonly string[] RandomAvatarList = new string[RandomAvatarListSize];
+    
     [JsonInclude] public readonly string[] Avatars;
-
-    public AvatarPreset()
+    
+    private static string GetRandomAvatarBarcode()
     {
-        Avatars = new string[BodyLog.BodylogAvatarCount];
-        for (var i = 0; i < BodyLog.BodylogAvatarCount; i++)
-        {
-            Avatars[i] = FallbackAvatarBarcode;
-        }
+        var index = UnityEngine.Random.RandomRangeInt(0, RandomAvatarListSize);
+        return RandomAvatarList[index];
     }
 
     public AvatarPreset(string[] avatars)
@@ -35,5 +37,18 @@ public class AvatarPreset
         }
         
         Avatars[index] = barcode;
+    }
+    
+    public static void PopulateRandomAvatarList()
+    {
+        var crates = AssetWarehouse.Instance.GetCrates<AvatarCrate>();
+        #if DEBUG
+        MelonLogger.Msg($"Found {crates._size} avatars");
+        #endif
+        var stepSize = crates._size / RandomAvatarListSize;
+        for (var i = 0; i < RandomAvatarListSize; i++)
+        {
+            RandomAvatarList[i] = crates._items[i * stepSize].Barcode.ID;
+        }
     }
 }

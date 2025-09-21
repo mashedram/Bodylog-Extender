@@ -1,48 +1,65 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using BodylogExtender.AvatarData;
 using MelonLoader;
 using MelonLoader.Utils;
+using UnityEngine;
 
 namespace BodylogExtender.Managers;
 
-public abstract class PresetManager
+public static class PresetManager
 {
     private static readonly string FilePath = MelonEnvironment.UserDataDirectory + "/FavoriteAvatars.json";
 
-    private static int _index;
-    private static Dictionary<int, AvatarPreset> _presets = new();
+    private static PresetState _state = new();
 
     #if DEBUG
-    public static int GetIndex()
+    public static uint GetIndex()
     {
-        return _index;
+        return _state.Index;
     }
     #endif
 
     public static void SetActivePreset(AvatarPreset preset)
     {
-        _presets[_index] = preset;
+        _state.ActivePreset = preset;
+    }
+
+    public static Color GetPresetColor()
+    {
+        var hue = (1.0f / _state.Size) * _state.Index;
+        return Color.HSVToRGB(hue, 1.0f, 1.0f);
     }
 
     public static AvatarPreset GetActivePreset()
     {
-        return _presets.TryGetValue(_index, out var preset) ? preset : new AvatarPreset();
+        return _state.GetOrCreateActivePreset();
     }
 
     public static void ToNextPreset()
     {
-        _index = (_index + 1) % Preferences.GetPresetCount();
+        _state.Index = (_state.Index + 1) % _state.Size;
+    }
+
+    public static uint GetPresetCount()
+    {
+        return _state.Size;
+    }
+
+    public static void SetPresetCount(uint count)
+    {
+        _state.Size = count;
     }
     
     // Saving / Loading
     
-    private static PresetSaveData? LoadPresetState()
+    private static PresetState? LoadPresetState()
     {
         if (!File.Exists(FilePath)) return null;
         try
         {
             var json = File.ReadAllText(FilePath);
-            return JsonSerializer.Deserialize<PresetSaveData>(json);
+            return JsonSerializer.Deserialize<PresetState>(json);
         }
         catch (Exception exception)
         {
@@ -51,7 +68,7 @@ public abstract class PresetManager
         }
     }
 
-    private static void SavePresetState(PresetSaveData presetSaveData)
+    private static void SavePresetState(PresetState presetSaveData)
     {
         var content = JsonSerializer.Serialize(presetSaveData);
         File.WriteAllText(FilePath, content);
@@ -61,12 +78,11 @@ public abstract class PresetManager
     {
         var presetState = LoadPresetState();
         if (presetState == null) return;
-        _index = presetState.Index;
-        _presets = presetState.GetPresets();
+        _state = presetState;
     }
     
     public static void SavePresetManager()
     {
-        SavePresetState(new PresetSaveData(_index, _presets));
+        SavePresetState(_state);
     }
 }

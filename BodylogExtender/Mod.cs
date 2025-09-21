@@ -1,4 +1,5 @@
-﻿using BodylogExtender.Managers;
+﻿using BodylogExtender.AvatarData;
+using BodylogExtender.Managers;
 using BoneLib;
 using MelonLoader;
 
@@ -13,28 +14,10 @@ public class Mod : MelonMod
         var harmony = new HarmonyLib.Harmony("BodylogExtender");
         harmony.PatchAll();
         
-        Preferences.Load();
         PresetManager.LoadPresetManager();
-        Hooking.OnLevelLoaded += OnLevelLoaded;
-        Hooking.OnLevelUnloaded += OnLevelUnloaded;
         ModBoneMenu.CreateBoneMenu();
     }
-
-    public override void OnDeinitializeMelon()
-    {
-        PresetManager.SavePresetManager();
-        Preferences.Save();
-    }
-
-    private static void OnLevelUnloaded() {
-        PresetManager.SavePresetManager();
-    }
-
-    private static void OnLevelLoaded(LevelInfo obj)
-    {
-        PresetManager.LoadPresetManager();
-    }
-
+    
     public override void OnUpdate()
     {
         BodyLogManager.Update();

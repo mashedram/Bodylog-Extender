@@ -5,6 +5,7 @@ using Il2CppSLZ.Marrow;
 using LabFusion;
 using LabFusion.Utilities;
 using MelonLoader;
+using UnityEngine;
 
 namespace BodylogExtender.Managers;
 
@@ -24,27 +25,55 @@ public abstract class BodyLogManager
         #if DEBUG
             MelonLogger.Msg("pullCordDevice Grabbed: " + pullCordDevice.name);
         #endif
-        _activeBodyLog = new BodyLog(pullCordDevice);
+
+        if (_activeBodyLog == null || !_activeBodyLog.IsValid())
+        {
+            _activeBodyLog = new BodyLog(pullCordDevice);
+            
+            // Assign on first grab
+            BodyLog.SetPreset(PresetManager.GetActivePreset(), _activeBodyLog);
+            _activeBodyLog.IsGrabbed = true;
+            return;
+        }
+        
+        if (_activeBodyLog.IsGrabbed) return;
+        
+        _activeBodyLog.IsGrabbed = true;
         PresetManager.SetActivePreset(BodyLog.GetPreset());
     }
 
     public static void OnBodyLogReleased(PullCordDevice pullCordDevice)
     {
         if (!IsLocalPlayer(pullCordDevice.rm)) return;
+        if (_activeBodyLog == null) return;
+        if (!_activeBodyLog.IsValid()) return;
+        if (!_activeBodyLog.IsGrabbed) return;
         #if DEBUG
             MelonLogger.Msg("pullCordDevice Released");
         #endif
-        _activeBodyLog = null;
+        _activeBodyLog.IsGrabbed = false;
+        
+        PresetManager.SavePresetManager();
     }
 
     public static void Update()
     {
         if (_activeBodyLog == null) return;
+        if (!_activeBodyLog.IsValid()) return;
+        if (!_activeBodyLog.IsGrabbed) return;
+
+        // Setting this directly after a mesh change makes the game internals overwrite the custom color immediatly.
+        // So, we need to do this workaround
+        if (_activeBodyLog.IsColorDirty)
+        {
+            _activeBodyLog.SetColor(PresetManager.GetPresetColor());
+        }
+        
         if (!InputManager.IsSwitchPresetButtonDown()) return;
         
         PresetManager.SetActivePreset(BodyLog.GetPreset());
         PresetManager.ToNextPreset();
-        _activeBodyLog.SetPreset(PresetManager.GetActivePreset());
+        BodyLog.SetPreset(PresetManager.GetActivePreset(), _activeBodyLog);
         #if DEBUG
             MelonLogger.Msg("preset changed to: " + PresetManager.GetIndex());
         #endif
