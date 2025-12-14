@@ -56,6 +56,7 @@ public static class PresetManager
     private static PresetState? LoadPresetState()
     {
         if (!File.Exists(FilePath)) return null;
+
         try
         {
             var json = File.ReadAllText(FilePath);
@@ -70,8 +71,15 @@ public static class PresetManager
 
     private static void SavePresetState(PresetState presetSaveData)
     {
-        var content = JsonSerializer.Serialize(presetSaveData);
-        File.WriteAllText(FilePath, content);
+        try
+        {
+            var content = JsonSerializer.Serialize(presetSaveData);
+            File.WriteAllText(FilePath, content);
+        }
+        catch (Exception ex)
+        {
+            MelonLogger.Error("Failed to save bodylog presets", ex);
+        }
     }
 
     public static void LoadPresetManager()

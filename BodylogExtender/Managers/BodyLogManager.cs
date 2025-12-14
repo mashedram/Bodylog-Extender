@@ -11,13 +11,18 @@ namespace BodylogExtender.Managers;
 
 public abstract class BodyLogManager
 {
-    private static readonly bool IsFusionLoaded = MelonBase.FindMelon(FusionMod.ModName, FusionMod.ModAuthor).Registered;
     private static BodyLog? _activeBodyLog;
 
+    // Seperate method to prevent IL2CPP from crashing by not finding the DLL of the method
+    private static bool IsFusionLocalRig(RigManager rig)
+    {
+        return rig.IsLocalPlayer();
+        
+    }
+    
     private static bool IsLocalPlayer(RigManager rig)
     {
-        if (!Mod.IsFusionLoaded) return true;
-        return !IsFusionLoaded || rig.IsLocalPlayer();
+        return !Mod.IsFusionLoaded || IsFusionLocalRig(rig);
     }
     
     public static void OnBodyLogGrabbed(PullCordDevice pullCordDevice)
